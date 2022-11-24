@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EncrypApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow"  Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50px"/>
@@ -16,6 +16,7 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="50px"/>
             <ColumnDefinition/>
+            <ColumnDefinition Width="120px"/>
             <ColumnDefinition />
             <ColumnDefinition Width="50px"/>
         </Grid.ColumnDefinitions>
