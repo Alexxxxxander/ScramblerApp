@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EncrypApp"
         mc:Ignorable="d"
-        Title="MainWindow"  Height="450" Width="800">
+        Title="MainWindow"  Height="450" Width="800" MinHeight="450" MinWidth="700" MaxHeight="500" Icon="/src/logo/password-manager.ico" >
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50px"/>
@@ -19,22 +19,25 @@
             <ColumnDefinition />
             <ColumnDefinition Width="50px"/>
         </Grid.ColumnDefinitions>
-        <TextBlock Grid.Row="1" Grid.Column="1" Background="White"></TextBlock>
-        <TextBlock Grid.Row="1" Grid.Column="2" Background="White"></TextBlock>
-        <Button Template="{DynamicResource BaseButton}" Background="White" Grid.Row="2" Grid.Column="1" Margin="5" Height="30" Width="100" VerticalAlignment="Top" HorizontalAlignment="Right"
-                Content="Вставить"/>
-        <Button Template="{DynamicResource BaseButton}" Background="White" Grid.Row="2" Grid.Column="1" Margin="5" Height="30" Width="100" VerticalAlignment="Top" HorizontalAlignment="Left" 
-                Content="Файл"/>
-        <Button Template="{DynamicResource BaseButton}" Background="White" Grid.Row="2" Grid.Column="2" Margin="5" Height="30" Width="100"  VerticalAlignment="Top" HorizontalAlignment="Right"
-                Content="Сохранить"/>
-        <Button  Template="{DynamicResource BaseButton}" Background="White" Grid.Row="2" Grid.Column="2" Margin="5" Height="30" Width="100"  VerticalAlignment="Top" HorizontalAlignment="Left" 
-                Content="Копировать"/>
-        <Button Template="{DynamicResource BaseButton}" Background="White" Grid.Row="3" Grid.ColumnSpan="2" Grid.Column="0" Margin="5"   Height="30" Width="100" VerticalAlignment="Top"
+        <Image Source="/src/logo/password-manager.png" Width="40" Height="40" ></Image>
+        <Rectangle Grid.Row="1" Grid.Column="1" Fill="#1f4571"></Rectangle>
+        <Rectangle Grid.Row="1" Grid.Column="2" Fill="#1f4571"></Rectangle>
+        <TextBox Grid.Row="1" Grid.Column="1" Background="#a4d4ff" Foreground="White" FontSize="28" Margin="1" AcceptsReturn="True" TextWrapping="Wrap"></TextBox>
+        <TextBox Grid.Row="1" Grid.Column="2" Background="#a4d4ff" Foreground="White" FontSize="28" Margin="1" AcceptsReturn="True" TextWrapping="Wrap"></TextBox>
+        <Button x:Name="BtnEnter" Template="{DynamicResource BaseButton}" Background="White" Grid.Row="2" Grid.Column="1" Margin="5" Height="30" Width="100" VerticalAlignment="Top" HorizontalAlignment="Right"
+                Content="Вставить" Click="BtnEmpty_Click"/>
+        <Button x:Name="BtnFile" Template="{DynamicResource BaseButton}" Background="White" Grid.Row="2" Grid.Column="1" Margin="5" Height="30" Width="100" VerticalAlignment="Top" HorizontalAlignment="Left" 
+                Content="Файл" Click="BtnEmpty_Click"/>
+        <Button x:Name="BtnSave" Template="{DynamicResource BaseButton}" Background="White" Grid.Row="2" Grid.Column="2" Margin="5" Height="30" Width="100"  VerticalAlignment="Top" HorizontalAlignment="Right"
+                Content="Сохранить" Click="BtnEmpty_Click"/>
+        <Button x:Name="BtnCopy"  Template="{DynamicResource BaseButton}" Background="White" Grid.Row="2" Grid.Column="2" Margin="5" Height="30" Width="100"  VerticalAlignment="Top" HorizontalAlignment="Left" 
+                Content="Копировать" Click="BtnEmpty_Click"/>
+        <Button x:Name="BtnHelp" Template="{DynamicResource BaseButton}" Background="White" Grid.Row="3" Grid.ColumnSpan="2" Grid.Column="0" Margin="5"   Height="30" Width="100" VerticalAlignment="Top"
                 HorizontalAlignment="Left"
-                Content="Справка"/>
-        <Button Template="{DynamicResource BaseButton}" Background="White" Grid.Row="3" Grid.ColumnSpan="2" Grid.Column="2" Margin="5" Height="30" Width="100" VerticalAlignment="Top"
+                Content="Справка" Click="BtnHelp_Click"/>
+        <Button x:Name="BtnClose" Template="{DynamicResource BaseButton}" Background="White" Grid.Row="3" Grid.ColumnSpan="2" Grid.Column="2" Margin="5" Height="30" Width="100" VerticalAlignment="Top"
                 HorizontalAlignment="Right"
-                Content="Закрыть"/>
-        <Button Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" Content="Поменять местами" Background="White" BorderThickness="0"/>
+                Content="Закрыть" Click="BtnClose_Click"/>
+        <Button x:Name="BtnChange" Style="{DynamicResource TopButton}" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" Content="Поменять местами" BorderThickness="1" Click="BtnEmpty_Click"/>
     </Grid>
 </Window>

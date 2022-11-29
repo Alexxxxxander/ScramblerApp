@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ScramblerApp.UI;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,45 @@ namespace EncrypApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        static public Boolean WindowOpened = false; //Переменная для определения состояния окна справки
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        /// <summary>
+        /// Метод обработки события нажатия на кнопку Закрыть
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnClose_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        /// <summary>
+        /// Метод запускающий заглушку для неназначенных кнопок
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnEmpty_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Функция в разработке", "Упс!", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+        /// <summary>
+        /// Метод обработки события нажатия на кнопку Справка 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnHelp_Click(object sender, RoutedEventArgs e)
+        {
+            if (!WindowOpened)
+            {   
+                HelpWindow helpWindow = new HelpWindow();
+                helpWindow.Show();
+                WindowOpened = true;
+            }
         }
     }
 }
