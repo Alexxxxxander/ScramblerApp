@@ -21,7 +21,7 @@ namespace EncrypApp
     /// </summary>
     public partial class MainWindow : Window
     {
-        static public Boolean WindowOpened = false; //Переменная для определения состояния окна справки
+        static public Boolean HelpOpened = false; //Переменная для определения состояния окна справки
         public MainWindow()
         {
             InitializeComponent();
@@ -54,11 +54,11 @@ namespace EncrypApp
         /// <param name="e"></param>
         private void BtnHelp_Click(object sender, RoutedEventArgs e)
         {
-            if (!WindowOpened)
+            if (!HelpOpened)
             {   
                 HelpWindow helpWindow = new HelpWindow();
                 helpWindow.Show();
-                WindowOpened = true;
+                HelpOpened = true;
             }
         }
     }

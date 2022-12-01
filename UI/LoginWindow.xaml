@@ -1,0 +1,22 @@
+﻿<Window x:Class="ScramblerApp.UI.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ScramblerApp.UI"
+        mc:Ignorable="d"
+        Title="LoginWindow" Height="450" Width="450" ResizeMode="NoResize" Icon="/src/logo/password-manager.ico">
+    <Grid>
+        <Image Source="/src/logo/password-manager.png" Opacity="0.15"></Image>
+        <TextBlock x:Name="TxtBlockError" FontSize="16" Foreground="Red" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 0 0 220"></TextBlock>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+            <TextBlock FontSize="18">Логин</TextBlock>
+            <TextBox x:Name="TxtBoxLogin" Height="30" Width="150" Margin="0 5 0 10" FontSize="18"></TextBox>
+            <TextBlock FontSize="18">Пароль</TextBlock>
+            <PasswordBox x:Name="PsswrdBoxPassword" Height="30" Width="150" Margin="0 5 0 10" FontSize="18"></PasswordBox>
+            <Button x:Name="BtnLogin" Template="{DynamicResource BaseButton}" Background="White" Height="30" Width="100" Click="BtnLogin_Click" >Войти</Button>
+        </StackPanel>
+
+    </Grid>
+</Window>
