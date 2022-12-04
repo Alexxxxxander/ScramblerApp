@@ -28,7 +28,7 @@ namespace ScramblerApp.UI
 
         private void BtnLogin_Click(object sender, RoutedEventArgs e)
         {
-            if (TxtBoxLogin.Text == "user" && PsswrdBoxPassword.Password == "user")
+            if (TxtBoxLogin.Text == "user" && PsswrdBoxPassword.GetPassword() == "user")
             {
                 MainWindow mainWindow = new MainWindow();
                 mainWindow.Show();

@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ScramblerApp.UI"
+        xmlns:contols="clr-namespace:ScramblerApp.UI.UControls"
         mc:Ignorable="d"
         Title="LoginWindow" Height="450" Width="450" ResizeMode="NoResize" Icon="/src/logo/password-manager.ico">
     <Grid>
@@ -14,7 +15,7 @@
             <TextBlock FontSize="18">Логин</TextBlock>
             <TextBox x:Name="TxtBoxLogin" Height="30" Width="150" Margin="0 5 0 10" FontSize="18"></TextBox>
             <TextBlock FontSize="18">Пароль</TextBlock>
-            <PasswordBox x:Name="PsswrdBoxPassword" Height="30" Width="150" Margin="0 5 0 10" FontSize="18"></PasswordBox>
+            <contols:PasswordBoxControl x:Name="PsswrdBoxPassword"></contols:PasswordBoxControl>
             <Button x:Name="BtnLogin" Template="{DynamicResource BaseButton}" Background="White" Height="30" Width="100" Click="BtnLogin_Click" >Войти</Button>
         </StackPanel>
 
