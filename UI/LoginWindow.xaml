@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ScramblerApp.UI"
         xmlns:contols="clr-namespace:ScramblerApp.UI.UControls"
         mc:Ignorable="d"
-        Title="LoginWindow" Height="450" Width="450" ResizeMode="NoResize" Icon="/src/logo/password-manager.ico">
+        Title="ScramblerApp" Height="450" Width="450" ResizeMode="NoResize" Icon="/src/logo/password-manager.ico">
     <Grid>
         <Image Source="/src/logo/password-manager.png" Opacity="0.15"></Image>
         <TextBlock x:Name="TxtBlockError" FontSize="16" Foreground="Red" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 0 0 220"></TextBlock>

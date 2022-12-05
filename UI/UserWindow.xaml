@@ -1,11 +1,11 @@
-﻿<Window x:Class="EncrypApp.MainWindow"
+﻿<Window x:Class="ScramblerApp.UI.MenedgerWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:EncrypApp"
+        xmlns:local="clr-namespace:ScramblerApp.UI"
         mc:Ignorable="d"
-        Title="MainWindow"  Height="450" Width="800" MinHeight="450" MinWidth="700" MaxHeight="500" Icon="/src/logo/password-manager.ico" >
+        Title="ScramblerApp - Пользователь"  Height="450" Width="800" MinHeight="450" MinWidth="700" MaxHeight="500" Icon="/src/logo/password-manager.ico" >
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50px"/>
@@ -38,6 +38,9 @@
         <Button x:Name="BtnClose" Template="{DynamicResource BaseButton}" Background="White" Grid.Row="3" Grid.ColumnSpan="2" Grid.Column="2" Margin="5" Height="30" Width="100" VerticalAlignment="Top"
                 HorizontalAlignment="Right"
                 Content="Закрыть" Click="BtnClose_Click"/>
+        <Button x:Name="BtnBack" Template="{DynamicResource BaseButton}" Background="White" Grid.Row="3" Grid.ColumnSpan="2" Grid.Column="0" Margin="115 5 0 0" Height="30" Width="100" VerticalAlignment="Top"
+                HorizontalAlignment="Left"
+                Content="Выход" Click="BtnBack_Click"/>
         <Button x:Name="BtnChange" Style="{DynamicResource TopButton}" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" Content="Поменять местами" BorderThickness="1" Click="BtnEmpty_Click"/>
     </Grid>
 </Window>

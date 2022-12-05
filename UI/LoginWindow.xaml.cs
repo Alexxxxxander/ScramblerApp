@@ -20,24 +20,29 @@ namespace ScramblerApp.UI
     /// </summary>
     public partial class LoginWindow : Window
     {
+        int errorCounter = 0;
         public LoginWindow()
         {
             InitializeComponent();
         }
 
-
+        /// <summary>
+        /// Обработчик события нажатия на кнопку Логин
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnLogin_Click(object sender, RoutedEventArgs e)
         {
-            if (TxtBoxLogin.Text == "user" && PsswrdBoxPassword.GetPassword() == "user")
-            {
-                MainWindow mainWindow = new MainWindow();
-                mainWindow.Show();
-                this.Close();
-            }
-            else
-            {
-                TxtBlockError.Text = "Неверно введен логин или пароль";
-            }
+                if (TxtBoxLogin.Text == "user" && PsswrdBoxPassword.GetPassword() == "user")
+                {
+                    MainWindow mainWindow = new MainWindow();
+                    mainWindow.Show();
+                    this.Close();
+                }
+                else
+                {
+                    TxtBlockError.Text = "Неверно введен логин или пароль";
+                } 
         }
     }
 }

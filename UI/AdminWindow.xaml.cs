@@ -61,5 +61,17 @@ namespace EncrypApp
                 HelpOpened = true;
             }
         }
+
+        /// <summary>
+        /// Метод обработки события нажатия на кнопку Выход
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnBack_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+            LoginWindow loginWindow = new LoginWindow();
+            loginWindow.Show();
+        }
     }
 }
