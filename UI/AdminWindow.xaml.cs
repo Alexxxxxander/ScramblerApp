@@ -19,10 +19,10 @@ namespace EncrypApp
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class AdminWindow : Window
     {
         static public Boolean HelpOpened = false; //Переменная для определения состояния окна справки
-        public MainWindow()
+        public AdminWindow()
         {
             InitializeComponent();
         }

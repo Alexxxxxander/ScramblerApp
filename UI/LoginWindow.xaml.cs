@@ -33,16 +33,28 @@ namespace ScramblerApp.UI
         /// <param name="e"></param>
         private void BtnLogin_Click(object sender, RoutedEventArgs e)
         {
-                if (TxtBoxLogin.Text == "user" && PsswrdBoxPassword.GetPassword() == "user")
+
+                if (TxtBoxLogin.Text == "Админ" && PsswrdBoxPassword.GetPassword() == "Админ")
                 {
-                    MainWindow mainWindow = new MainWindow();
-                    mainWindow.Show();
+                    AdminWindow adminWindow = new AdminWindow();
+                    adminWindow.Show();
                     this.Close();
                 }
                 else
                 {
                     TxtBlockError.Text = "Неверно введен логин или пароль";
-                } 
+                }
+
+            if (TxtBoxLogin.Text == "Менеджер" && PsswrdBoxPassword.GetPassword() == "Менеджер")
+            {
+                MenedgerWindow menedgerWindow = new MenedgerWindow();
+                menedgerWindow.Show();
+                this.Close();
+            }
+            else
+            {
+                TxtBlockError.Text = "Неверно введен логин или пароль";
+            }
         }
     }
 }
