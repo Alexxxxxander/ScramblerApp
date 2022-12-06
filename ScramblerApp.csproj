@@ -55,8 +55,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="UI\UserWindow.xaml.cs">
-      <DependentUpon>UserWindow.xaml</DependentUpon>
+    <Compile Include="UI\MenedgerWindow.xaml.cs">
+      <DependentUpon>MenedgerWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="UI\UControls\PasswordBoxControl.xaml.cs">
       <DependentUpon>PasswordBoxControl.xaml</DependentUpon>
@@ -91,7 +91,7 @@
       <DependentUpon>AdminWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="UI\UserWindow.xaml">
+    <Page Include="UI\MenedgerWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

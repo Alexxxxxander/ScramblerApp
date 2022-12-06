@@ -43,7 +43,8 @@ namespace ScramblerApp.UI
         /// <param name="e"></param>
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            MainWindow.HelpOpened = false;
+            AdminWindow.HelpOpened = false;
+            MenedgerWindow.HelpOpened = false;
         }
     }
 }

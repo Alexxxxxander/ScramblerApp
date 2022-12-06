@@ -20,7 +20,7 @@ namespace ScramblerApp.UI
     /// </summary>
     public partial class LoginWindow : Window
     {
-        int errorCounter = 0;
+
         public LoginWindow()
         {
             InitializeComponent();
