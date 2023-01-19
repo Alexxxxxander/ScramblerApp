@@ -45,10 +45,10 @@ namespace ScramblerApp.UI
                     TxtBlockError.Text = "Неверно введен логин или пароль";
                 }
 
-            if (TxtBoxLogin.Text == "Менеджер" && PsswrdBoxPassword.GetPassword() == "Менеджер")
+            if (TxtBoxLogin.Text == "Пользователь" && PsswrdBoxPassword.GetPassword() == "Пользователь")
             {
-                MenedgerWindow menedgerWindow = new MenedgerWindow();
-                menedgerWindow.Show();
+                UserWindow userWindow = new UserWindow();
+                userWindow.Show();
                 this.Close();
             }
             else

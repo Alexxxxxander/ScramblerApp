@@ -15,12 +15,12 @@ using System.Windows.Shapes;
 namespace ScramblerApp.UI
 {
     /// <summary>
-    /// Логика взаимодействия для MenedgerWindow.xaml
+    /// Логика взаимодействия для UserWindow.xaml
     /// </summary>
-    public partial class MenedgerWindow : Window
+    public partial class UserWindow : Window
     {
         static public Boolean HelpOpened = false; //Переменная для определения состояния окна справки
-        public MenedgerWindow()
+        public UserWindow()
         {
             InitializeComponent();
         }
